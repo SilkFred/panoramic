@@ -3,6 +3,8 @@ module Panoramic
     module Mongoid
       def store_templates
         class_eval do
+          include ::Mongoid::Timestamps
+
           field :body
           field :path
           field :format
