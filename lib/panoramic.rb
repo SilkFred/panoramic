@@ -1,2 +1,6 @@
 require 'panoramic/resolver'
-require 'panoramic/orm/active_record'
+if defined?(Mongoid)
+  require 'panoramic/orm/mongoid'
+elsif defined?(ActiveRecord)
+  require 'panoramic/orm/active_record'
+end
