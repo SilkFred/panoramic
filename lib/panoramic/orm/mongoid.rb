@@ -10,6 +10,7 @@ module Panoramic
           field :format
           field :locale
           field :handler
+          field :partial, :type => Boolean, :default => false
 
           validates :body,    :presence => true
           validates :path,    :presence => true
